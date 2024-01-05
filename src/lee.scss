@@ -1,0 +1,140 @@
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+
+}
+
+
+
+
+
+.inline-col-group {
+    background-color: #d1edff;
+    margin: 0 auto;
+    line-height: 2.5;
+    display: flex;
+    justify-content: end;
+    font-size: 12px;
+}
+
+.fade_link {
+    color: #9FA3AB;
+    text-decoration: none;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#logo {
+    position: relative;
+    top: 10px;
+    left: 50px;
+    border-width: 0;
+    border-bottom: 1px solid #e5e7eb;
+
+
+}
+
+.mainitem {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    right: 70px;
+    bottom: 90px;
+}
+
+.mainitem li {
+    list-style: none;
+}
+
+.mainitem a {
+    text-decoration: none;
+    color: black;
+}
+
+.btn_form {
+    line-height: 1.5;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    background-color: #d1edff;
+    border-style: none;
+
+}
+
+input:focus {
+    outline: none !important;
+    border-color: #d6a8e9;
+    box-shadow: 0 0 10px #d6a8e9;
+}
+
+
+
+.material-icons {
+    position: absolute;
+    right: 20px;
+    bottom: 12px;
+}
+
+.img_pc {
+
+    position: relative;
+    top: 0;
+    left: 55%;
+
+}
+
+.img_pc img {
+    width: 30%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.sh {
+    color: #222;
+    text-align: center;
+    font-size: 24px;
+    transform: translateY(50%);
+    transition: 1s;
+    opacity: 1;
+    margin: 20px;
+}
+
+.dp {
+    color: black;
+    text-align: center;
+    color: #222;
+    display: block;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.7px;
+    font-size: 2rem;
+}
+
+.swiper-slide-active .sh {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.bt {
+    text-align: left;
+    margin-top: 10px;
+    position: absolute;
+    top: 30%;
+    right: 50%;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    position: absolute;
+    color: #e5e7eb;
+}
+
+.swiper-button-next::after {
+    right: 150px;
+}
+
+.swiper-button-prev::after {
+    left: 100px;
+}
