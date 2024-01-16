@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { CiSearch } from "react-icons/ci";
 import { Link } from "react-router-dom";
-import mainlogo from './img/logo.png';
-
+import mainlogo from '../img/logo.png';
 
 function Navi_var() {
+
     const [clicked, setClicked] = useState(false);
 
     const handleLogoclick = () => {
@@ -14,11 +14,15 @@ function Navi_var() {
     return (
 
         <>
+
             <div className="navivar">
-                <div className="inline-blocked login_btn_item ">
-                    <a className="fade_link" href="https://ainbooks.kr/site_join_type_choice?back_url=Lw%3D%3D" ><span class="text fixed_transform ">회원가입</span></a>
-                    <a className="fade_link" href="https://ainbooks.kr/login?back_url=Lw%3D%3D&used_login_btn=Y" ><span class="text fixed_transform ">로그인</span></a>
-                    <a className="fade_link" href="#" ><span class="text fixed_transform ">서점가이드</span></a>
+                <div className="mypage">
+                    <ul>
+                        <li>
+                            <a href='https://github.com/snb2323/portfolio' target="_blank" rel="noopener noreferrer">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 

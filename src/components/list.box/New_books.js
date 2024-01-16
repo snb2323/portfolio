@@ -1,15 +1,16 @@
-import React from "react";
+import React from 'react';
 import { Link } from 'react-router-dom';
-import datainfo from '../data/data.json'
+import datainfo from '../../data/data.json'
 
 
-function Bestbooks() {
+function New_books() {
+    console.log(datainfo)
     return (
         <>
-            <h2 className='newh'>best</h2>
-            <div className='newbooks col-row d-flex '>
+            <h2 className='navivartitle'>New</h2>
+            <div className='as col-row d-flex '>
                 {datainfo.newbooks.map((book, index) => (
-                    <div key={index} style={{ width: "270px", height: "270" }}>
+                    <div key={index} >
 
                         <Link to={`/new-books/${index}`}>
                             <img className='newb' src={book.src} alt={book.alt} />
@@ -26,4 +27,5 @@ function Bestbooks() {
         </>
     );
 }
-export default Bestbooks
+
+export default New_books;

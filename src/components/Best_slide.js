@@ -8,8 +8,10 @@ import 'swiper/css/pagination';
 import 'swiper/swiper-bundle.css';
 
 
+
 function Best_slide(props) {
     return (
+
         <Swiper
             modules={[Navigation, EffectFade, Autoplay, Pagination]} effect="fade"
             loop={true}

@@ -6,19 +6,22 @@ import './lee.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import datainfo from './data/data.json'
 import List_box from './components/List_box';
-import New_books from './components/New_books';
-import Navi_var from './components/Navi_var';
-import Bestbook from './components/Bestbook';
+import New_books from './components/list.box/New_books';
+import Navi_var from './components/navi.var/Navi_var';
+import Bestbook from './components/list.box/Bestbook';
 import Best_slide from './components/Best_slide';
 import Detail_newbooks from './components/Detail_newbooks';
-import Essay from './components/Essay';
-import Design from './components/Design';
-import Illust from './components/Illust';
-import Photo from './components/Photo';
-import Postcard from './components/Postcard'
-import Curation from './components/Curation'
-import Goods from './components/Goods'
-import Program from './components/Program'
+import Essay from './components/navi.var/Essay';
+import Design from './components/navi.var/Design';
+import Illust from './components/navi.var/Illust';
+import Photo from './components/navi.var/Photo';
+import Postcard from './components/navi.var/Postcard'
+import Curation from './components/list.box/Curation'
+import Goods from './components/list.box/Goods'
+import Program from './components/list.box/Program'
+import Main from './components/Main_.js';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -39,6 +42,7 @@ root.render(
           <>
             <Best_slide data={datainfo} />
             <List_box></List_box>
+            <Main />
           </>
         } />
         <Route path="/new-books/" element={<New_books />} />
@@ -46,9 +50,9 @@ root.render(
         <Route path="/Curation/" element={<Curation />} />
         <Route path="/Goods/" element={<Goods />} />
         <Route path="/Program/" element={<Program />} />
-
         <Route path="/new-books/:index" element={<Detail_newbooks />} />
       </Routes>
     </BrowserRouter>
+
   </>
 );
