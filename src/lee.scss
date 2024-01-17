@@ -55,11 +55,6 @@
     border-width: 0;
 }
 
-#logo:focus {
-    border-color: #d6a8e9;
-
-}
-
 .mainitem {
     width: auto;
     position: relative;
@@ -369,7 +364,6 @@
 
 
 .formin {
-    border-color: #ddd;
     text-align: center;
     width: 60px;
     height: 32px;
@@ -405,11 +399,6 @@
     font-style: italic;
 }
 
-.maintitle h1 {
-    color: rgb(0 0 0 / 60%);
-
-}
-
 .mainslide {
     display: flex;
     // justify-content: center;
@@ -433,4 +422,11 @@
 .mainteduli {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.mypg {
+    margin: 10px;
+    line-height: 2;
+    justify-content: center;
+    text-align: center;
 }

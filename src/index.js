@@ -20,6 +20,7 @@ import Curation from './components/list.box/Curation'
 import Goods from './components/list.box/Goods'
 import Program from './components/list.box/Program'
 import Main from './components/Main_.js';
+import New from './components/New';
 
 
 
@@ -27,6 +28,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
     <BrowserRouter>
+
       <Navi_var />
       <Routes>
         <Route path="/Essay" element={<Essay />} />
@@ -42,7 +44,8 @@ root.render(
           <>
             <Best_slide data={datainfo} />
             <List_box></List_box>
-            <Main />
+            <Main></Main>
+            <New></New>
           </>
         } />
         <Route path="/new-books/" element={<New_books />} />

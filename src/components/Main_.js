@@ -20,7 +20,11 @@ const MainWrapper = styled.div`
       width: 250px;
       height: 280px;
     }
+    .mainslide{
+        display:flex;
+    }
     h1 {
+      color: rgb(0 0 0 / 60%);
       line-height: 5;
       text-align: center;
       height: 150px;
@@ -64,16 +68,16 @@ const MainWrapper = styled.div`
 
     margin-top:10px;
       position:absolute;
-      left:25%;
+      left:30%;
       background-color:rgb(0 0 0 / 60%);
-      width: 50%;
+      width: 40%;
       border-radius: 4px;
 
     }
   }
   .swiper-slide {
     flex-grow: 3;
-    width: 350px !important;
+    width: 450px !important;
     margin: 0 !important;
 }
 
@@ -105,18 +109,16 @@ export default function Main() {
                         onSwiper={(swiper) => console.log(swiper)}
 
                     >
-                        <div className="swiperwrap">
-                            <div className="mainitem">
-                                <SwiperSlide >
-                                    <div className="mainteduli">
-                                        <img src="https://indiepub.kr/web/product/medium/202401/71374400613482ef80909ccac755f4aa.png"></img>
-                                    </div>
-                                    <div className="maintedulip">
-                                        <strong>  <p>행복의 정석 1편</p></strong>
-                                        <strong><p>14,000원 </p></strong>
-                                    </div>
-                                </SwiperSlide>
-                            </div>
+                        <div className="mainitem">
+                            <SwiperSlide >
+                                <div className="mainteduli">
+                                    <img src="https://indiepub.kr/web/product/medium/202401/71374400613482ef80909ccac755f4aa.png"></img>
+                                </div>
+                                <div className="maintedulip">
+                                    <strong>  <p>행복의 정석 1편</p></strong>
+                                    <strong><p>14,000원 </p></strong>
+                                </div>
+                            </SwiperSlide>
                         </div>
 
                         <SwiperSlide>
@@ -154,9 +156,32 @@ export default function Main() {
                             </div>
                         </SwiperSlide>
 
+                        <SwiperSlide>
+                            <div className="mainteduli">
+                                <img src="https://indiepub.kr/web/product/medium/202401/fd57498b0d7217090e036eec64a65bf3.jpg" alt="이미지"></img>
+                            </div>
+
+                            <div className="maintedulip">
+                                <strong>  <p>옥희씨의 나들이</p></strong>
+                                <strong><p>16,000원 </p></strong>
+                            </div>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <div className="mainteduli">
+                                <img src="https://indiepub.kr/web/product/medium/202401/fd57498b0d7217090e036eec64a65bf3.jpg" alt="이미지"></img>
+                            </div>
+
+                            <div className="maintedulip">
+                                <strong>  <p>옥희씨의 나들이</p></strong>
+                                <strong><p>16,000원 </p></strong>
+                            </div>
+                        </SwiperSlide>
+
+
+
                         ...
                     </Swiper>
-
                 </div >
 
             </MainWrapper>

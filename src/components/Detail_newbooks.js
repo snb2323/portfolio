@@ -11,12 +11,13 @@ function Detail_newbooks() {
     const [quantity, setQuantity] = useState(1);
     const handleIncrement = () => {
         setQuantity(quantity + 1);
+
     };
 
     const handleDecrement = () => {
-        setQuantity(quantity - 1);
-
+        setQuantity((prevQuantity) => Math.max(prevQuantity - 1, 0));
     };
+
 
     const handlechange = (e) => {
         setoption(e);
@@ -89,7 +90,7 @@ function Detail_newbooks() {
                                     <input className='formin' type="text" value={quantity} />
                                     <button className='quantity-btn' onClick={handleIncrement}>+</button>
 
-                                    <span className='prise'>22,000원</span>
+                                    <span className='prise'>{22_000 * quantity}원</span>
                                 </div>
 
                             </div>
