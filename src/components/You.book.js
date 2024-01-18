@@ -1,6 +1,5 @@
 import React from "react"
 import '../../src/lee.scss'
-
 import MainWrapper from './Styled/mainstyle'
 import { Router, Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -13,12 +12,12 @@ import 'swiper/swiper-bundle.css';
 
 
 
-
-export default function Main() {
+export default function User() {
     return (
         <>
-            <div className="container maintitle">
-                <h1>Best</h1>
+            <div className="usertitle ">
+                <strong> <h3 style={{ color: '#000000' }}>타인의 책장</h3></strong>
+                <p style={{ color: "#999999" }}>고객님들의 직접 작성한 리뷰를 확인해보세요.</p>
             </div>
 
             <MainWrapper>
@@ -34,7 +33,7 @@ export default function Main() {
                         onSlideChange={() => console.log('slide change')}
                         onSwiper={(swiper) => console.log(swiper)}
                     >
-                        {datainfo.Design.map((book, index) => (
+                        {datainfo.User.map((book, index) => (
                             <div className="mainitem">
 
                                 <SwiperSlide key={index}>
@@ -47,7 +46,7 @@ export default function Main() {
                                         </Link>
                                     </div>
                                     <div className="maintedulip">
-                                        <strong><h4>{book.h4}</h4></strong>
+                                        <strong><h3>{book.h5}</h3></strong>
                                         <strong><p>{book.p}</p></strong>
                                     </div>
                                 </SwiperSlide>
@@ -60,6 +59,3 @@ export default function Main() {
         </>
     );
 }
-
-
-

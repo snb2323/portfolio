@@ -21,6 +21,7 @@ import Goods from './components/list.box/Goods'
 import Program from './components/list.box/Program'
 import Main from './components/Main_.js';
 import New from './components/New';
+import User from './components/You.book';
 
 
 
@@ -46,6 +47,7 @@ root.render(
             <List_box></List_box>
             <Main></Main>
             <New></New>
+            <User></User>
           </>
         } />
         <Route path="/new-books/" element={<New_books />} />
