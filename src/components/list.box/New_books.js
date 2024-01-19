@@ -4,7 +4,7 @@ import datainfo from '../../data/data.json'
 import Navibook from '../Styled/navibook';
 
 function New_books() {
-    console.log(datainfo)
+
     return (
         <>
             <Navibook>

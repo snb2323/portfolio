@@ -66,8 +66,14 @@ const MainWrapper = styled.div`
     margin: 0 !important;
 }
 
-
-  
+.usertext {
+    position: absolute;
+    bottom: -14px;
+    font-size: 12.6px;
+}
+.usertext p{
+  color:#777777;
+}  
 
 `;
 

@@ -30,24 +30,32 @@ export default function User() {
                         spaceBetween={50}
                         slidesPerView={3}
                         scrollbar={{ draggable: true, dragSize: 24 }}
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log(swiper)}
+
                     >
                         {datainfo.User.map((book, index) => (
                             <div className="mainitem">
 
                                 <SwiperSlide key={index}>
-                                    <div className="mainteduli">
-                                        <Link to={`/new-books/${index}`}>
-                                            <img
-                                                src={book.src}
-                                                alt={book.alt}
-                                            />
-                                        </Link>
-                                    </div>
-                                    <div className="maintedulip">
-                                        <strong><h3>{book.h5}</h3></strong>
-                                        <strong><p>{book.p}</p></strong>
+                                    <div className="userswiper">
+                                        <div className="mainteduli">
+                                            <Link to={`/new-books/${index}`}>
+                                                <img
+                                                    src={book.src}
+                                                    alt={book.alt}
+                                                />
+                                            </Link>
+                                        </div>
+                                        <div className="maintedulip usertext">
+                                            <strong><h4>{book.h4}</h4></strong>
+                                            <strong><p>{book.p}</p></strong>
+                                            <div className="review">
+                                                <p className="star">김** 24.01.19</p>
+                                                <strong>   <div className="rest">
+                                                    5.0
+                                                </div>
+                                                </strong>
+                                            </div>
+                                        </div>
                                     </div>
                                 </SwiperSlide>
                             </div>
