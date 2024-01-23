@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { } from "react";
 import '../../src/lee.scss'
 import MainWrapper from './Styled/mainstyle'
-import { Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Scrollbar } from 'swiper/modules';
 import datainfo from "../data/data.json"

@@ -475,6 +475,47 @@
 
 .mainteduli img::after {}
 
+//form 
+.formh {
+    position: relative;
+}
+
+// .text {
+//     text-align: center;
+//     position: relative;
+//     left: 65%;
+//     bottom: 150px;
+// }
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dda {
+    text-align: center;
+    justify-content: center;
+}
+
+.btns button {
+    font-size: 20px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 0 20px;
+    // width: 30px;
+    height: auto;
+}
+
+input {
+    background: transparent;
+    background-size: 0%;
+    border: none;
+    border-bottom: 1px solid black;
+    color: white;
+
+}
 
 // .star {  
 //     background: url(https://indiepub.kr/board/review/img/icon-star-rating5.svg) no-repeat right 0 / 60px auto;
