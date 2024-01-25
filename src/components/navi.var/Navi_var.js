@@ -2,16 +2,13 @@ import React, { useState } from 'react';
 import { CiSearch } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import mainlogo from '../img/logo.png';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { FaGit } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaGit } from '@fortawesome/free-solid-svg-icons';
 
 function Navi_var() {
 
-    const [clicked, setClicked] = useState(false);
 
-    const handleLogoclick = () => {
-        setClicked(!clicked);
-    }
+
 
     return (
 
@@ -38,7 +35,7 @@ function Navi_var() {
 
 
             <Link to="/">
-                <img onClick={handleLogoclick} className='logo' src={mainlogo} alt='로고' width="161px" />
+                <img className='logo' src={mainlogo} alt='로고' width="161px" />
             </Link>
 
 
@@ -74,21 +71,24 @@ function Navi_var() {
                     </Link>
                 </ul>
 
-                <form >
+                <form>
                     <input
                         className="btn_form"
                         type="text"
                         name="keyword"
                         placeholder="Search"
                         defaultValue=""
+
                     />
-                    <CiSearch />
+                    <button type='submit'>
+                        <CiSearch />
+                    </button>
 
 
                 </form >
             </div>
         </>
     )
-}
 
+}
 export default Navi_var

@@ -38,18 +38,17 @@ export default function User() {
                                 <SwiperSlide key={index}>
                                     <div className="userswiper">
                                         <div className="mainteduli">
-                                            <Link to={`/new-books/${index}`}>
-                                                <img
-                                                    src={book.src}
-                                                    alt={book.alt}
-                                                />
-                                            </Link>
+                                            <img
+                                                src={book.src}
+                                                alt={book.alt}
+                                            />
                                         </div>
+
                                         <div className="maintedulip usertext">
                                             <strong><h4>{book.h4}</h4></strong>
                                             <strong><p>{book.p}</p></strong>
                                             <div className="review">
-                                                <p className="star">김** 24.01.19</p>
+                                                <p className="">김** 24.01.19</p>
                                                 <strong>   <div className="rest">
                                                     5.0
                                                 </div>

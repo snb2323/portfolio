@@ -19,7 +19,7 @@ const MainWrapper = styled.div`
     }
     .mainteduli {
       display: flex;
-      margin: 38px 0  0 40px !important;
+      margin: 38px 0  40px 80px !important;
       border: 15px solid white;
       width: 280px;
       height: 380px;
@@ -74,7 +74,11 @@ const MainWrapper = styled.div`
 .usertext p{
   color:#777777;
 }  
-
+.ico {
+  z-index: 100000;
+    position: absolute;
+    bottom: 60px;
+    left: 92px;}
 `;
 
 export default MainWrapper

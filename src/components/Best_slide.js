@@ -66,9 +66,10 @@ function Best_slide(props) {
                                             </React.Fragment>
                                         ))}
                                     </div>
-                                    <div className='swiper-pagination'>
-                                        <span className='swiper-pagination-bullet'></span>
-
+                                    <div className="swpag">
+                                        <div className='swiper-pagination'>
+                                            <span className='swiper-pagination-bullet'></span>
+                                        </div>
                                     </div>
                                 </div>
 
