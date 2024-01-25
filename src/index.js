@@ -22,7 +22,6 @@ import Program from './components/list.box/Program'
 import Main from './components/Main_.js';
 import New from './components/New';
 import User from './components/You.book';
-import Form from './components/Form';
 
 
 
@@ -49,7 +48,6 @@ root.render(
             <Main></Main>
             <New></New>
             <User></User>
-            <Form></Form>
           </>
         } />
         <Route path="/new-books/" element={<New_books />} />
