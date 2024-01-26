@@ -80,10 +80,11 @@ function Navi_var() {
                         defaultValue=""
 
                     />
-                    <button type='submit'>
-                        <CiSearch />
-                    </button>
-
+                    <div className='subtn'>
+                        <button type='submit'>
+                            <CiSearch />
+                        </button>
+                    </div>
 
                 </form >
             </div>

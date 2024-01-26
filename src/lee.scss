@@ -158,14 +158,14 @@
     background: #d1edff;
     border-radius: 30px;
     position: absolute;
-    bottom: 45% !important;
-    left: 40% !important;
+    bottom: 50% !important;
+    left: 48% !important;
     padding: 5px 0;
     color: #fff !important;
-
-
-
 }
+
+
+
 
 
 
@@ -181,7 +181,7 @@
 
 .site {
 
-    top: 80%;
+    bottom: -18%;
     left: 28%;
     z-index: 10000;
     position: absolute;
@@ -497,18 +497,24 @@
 
 
 //form 
-.form {
+// .form {
+//     background-size: auto;
+//     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(./components/img/form.jpg);
+//     background-size: cover;
+//     background-position: top;
+//     object-fit: cover
+// }
+.sectionform {
+    position: relative;
     width: auto;
-    height: 500px;
-    // background-image: url(../public/img/form.jpg);
-    background-size: auto;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../public/img/form.jpg); // background-position: 2dvh;
-    background-repeat: no-repeat;
+    min-height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(./components/img/form.jpg) left bottom no-repeat;
+    font-weight: 400;
 }
 
-//form 
 .formh {
     position: relative;
+    color: #ddd;
 }
 
 // .text {
@@ -531,36 +537,71 @@
 
 .btns button {
     font-size: 20px;
+    color: white;
     background-color: transparent;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 30px;
     padding: 0 20px;
     // width: 30px;
     height: auto;
 }
 
-input {
-    background: transparent;
-    background-size: 0%;
-    border: none;
-    border-bottom: 1px solid black;
-    color: white;
-
-}
 
 input {
     outline: none;
 }
 
-.valid {
-    border: 1px solid green;
+#name,
+#address,
+#email {
+    border-bottom: 1px solid white;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
 
+input::placeholder {
+    color: white;
+}
+
+.valid {
+
+    border: 2px solid green;
+    background: url(./components/img/true.png) no-repeat right center;
+    background-size: 15px;
+    background-position-x: 150px;
 }
 
 
-.invalid {
-    border: 1px solid red;
 
+
+.invalid {
+    border: 2px solid #f44336;
+    background: url(./components/img/false.png) no-repeat right center;
+    background-size: 15px;
+    background-position-x: 150px;
+}
+
+textarea::placeholder {
+    color: #ddd;
+}
+
+textarea {
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+.text {
+    position: relative;
+    top: 35%;
+    left: 40%;
+    min-width: 350px;
+    height: 150px;
+    max-height: 150px;
+}
+
+.btns {
+    margin-right: 10px;
 }
 
 //모바일 
@@ -595,5 +636,9 @@ input {
         top: 100px;
         z-index: 100000;
         font-size: 20px !important;
+    }
+
+    .text {
+        display: block;
     }
 }

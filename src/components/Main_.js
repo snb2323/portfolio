@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/scrollbar';
 import 'swiper/swiper-bundle.css';
-import { useState } from "react";
+// import { useState } from "react";
 // import heartImage from "./img/icon_1.png"
 import { HeartOutlined, HeartFilled } from '@ant-design/icons';
 import cartImage from "./img/icon_2.png"
