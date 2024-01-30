@@ -9,7 +9,31 @@
 }
 
 
+.w-0 {
+    width: 0;
+    white-space: nowrap;
 
+    a {
+        white-space: nowrap;
+    }
+}
+
+.zup {
+    z-index: 100000;
+}
+
+.beforemk:before {
+    content: "";
+}
+
+.aftermk:after {
+    content: "";
+}
+
+.noafter:after,
+.nobefore:before {
+    display: none;
+}
 
 // 상단navivar
 .navivar {
@@ -34,12 +58,7 @@
     height: 340px;
 }
 
-#search {
-
-    position: absolute;
-    right: 25px;
-    top: 10px;
-}
+#search {}
 
 .fade_link {
     color: #9FA3AB;
@@ -50,37 +69,25 @@
 
 .logo {
     z-index: 100000;
-    position: relative;
-    top: 10px;
-    left: 50px;
+
     border-width: 0;
 }
 
 .mainitem {
-    width: auto;
-    position: relative;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    right: 60px;
-    bottom: 90px;
     font-size: 13px;
 }
 
 
 
-.mainitem a {
+.navi a {
     text-decoration: none;
     color: black;
     padding: 10px;
+    font-size: 1rem;
 }
 
 .btn_form {
     line-height: 1.5;
-    position: absolute;
-    bottom: 10px;
-    right: 20px;
     background-color: #d1edff;
     border-style: none;
 
@@ -670,10 +677,11 @@ footer {
 }
 
 .btni {
-    z-index: 10000009;
-    position: relative;
-    left: 45%;
-    bottom: 50px;
+
+    //after 이용해서 햄버거출력
+    &.toggle {
+        // X로 출력
+    }
 }
 
 // .over {
