@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { CiSearch } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import mainlogo from '../img/logo.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FaGit } from '@fortawesome/free-solid-svg-icons';
+
 
 function Navi_var() {
-
-
-
+    const [showmenu, setshouwmenu] = useState(false)
+    const togglemenu = () => {
+        setshouwmenu(!showmenu)
+    };
 
     return (
 
         <>
 
             <div className="navivar">
-                <div className="mypage">
+                <div className="mainitem d-lg-flex d-sm-none d-md-none">
                     <ul className='mypg d-flex'>
                         <li>
                             <a href='https://github.com/snb2323/portfolio' target="_blank" rel="noopener noreferrer" >
@@ -35,59 +35,59 @@ function Navi_var() {
 
 
             <Link to="/">
-                <img className='logo' src={mainlogo} alt='로고' width="161px" />
+                <img className='logo' src={mainlogo} alt='로고' width="161vw" />
             </Link>
 
 
-
-
-            <div className='mainitem d-flex'>
-
-                <ul>
-                    <li>
-                        <Link to="/Essay">
-                            <span>에세이/시</span>
-                        </Link>
-                    </li>
-                </ul>
-                <ul>
-                    <Link to="/Design">
-                        <span>디자인/문화</span>
-                    </Link>
-                </ul>
-                <ul>
-                    <Link to="/Illust">
-                        <span>만화/일러스트</span>
-                    </Link>
-                </ul>
-                <ul>
-                    <Link to="/Photo">
-                        <span>사진</span>
-                    </Link>
-                </ul>
-                <ul>
-                    <Link to="/Postcard">
-                        <span>엽서북</span>
-                    </Link>
-                </ul>
-
-                <form>
-                    <input
-                        className="btn_form"
-                        type="text"
-                        name="keyword"
-                        placeholder="Search"
-                        defaultValue=""
-
-                    />
-                    <div className='subtn'>
-                        <button type='submit'>
-                            <CiSearch />
-                        </button>
-                    </div>
-
-                </form >
+            <div className={`btni  d-md-flex d-md-none `}>
+                <button onClick={togglemenu}>메뉴</button>
             </div>
+            {showmenu && (
+                <div className='mainitem d-lg-flex  d-md-none '>
+                    <ul>
+                        <li>
+                            <Link to="/Essay">
+                                <span>에세이/시</span>
+                            </Link>
+                        </li>
+                    </ul>
+                    <ul>
+                        <Link to="/Design">
+                            <span>디자인/문화</span>
+                        </Link>
+                    </ul>
+                    <ul>
+                        <Link to="/Illust">
+                            <span>만화/일러스트</span>
+                        </Link>
+                    </ul>
+                    <ul>
+                        <Link to="/Photo">
+                            <span>사진</span>
+                        </Link>
+                    </ul>
+                    <ul>
+                        <Link to="/Postcard">
+                            <span>엽서북</span>
+                        </Link>
+                    </ul>
+
+                    <form>
+                        <div className='subtn'>
+                            <input
+                                className="btn_form"
+                                type="text"
+                                name="keyword"
+                                placeholder="Search"
+                                defaultValue="" />
+
+                            <CiSearch />
+                        </div>
+
+
+                    </form >
+                </div>
+            )}
         </>
     )
 

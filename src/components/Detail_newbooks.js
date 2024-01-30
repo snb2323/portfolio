@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import datainfo from '../data/data.json';
 import { Dropdown, DropdownButton } from 'react-bootstrap';
@@ -9,6 +9,7 @@ function Detail_newbooks() {
     const { index } = useParams();
     const [option, setoption] = useState(false)
     const [quantity, setQuantity] = useState(1);
+
     const handleIncrement = () => {
         setQuantity(quantity + 1);
 
@@ -30,7 +31,7 @@ function Detail_newbooks() {
                 <h3 className='detailh3'>{datainfo.detailnewbooks[index].h4}</h3>
                 <p>{datainfo.detailnewbooks[index].p}</p>
             </div>
-            <div className='row'>
+            <div className='row over'>
                 <div className='col-7 '>
                     <img className='bookimg' src={datainfo.detailnewbooks[index].src} alt="newbook" />
                 </div>

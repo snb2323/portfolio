@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter, Routes, Route, Switch
+} from 'react-router-dom';
 import './index.css';
 import './lee.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -23,6 +25,8 @@ import Main from './components/Main_.js';
 import New from './components/New';
 import User from './components/You.book';
 import Form from './components/Form';
+import Footer from './components/Footer_';
+import Scrolltop from './components/Scrollto';
 
 
 
@@ -30,7 +34,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
     <BrowserRouter>
-
+      <Scrolltop />
       <Navi_var />
       <Routes>
         <Route path="/Essay" element={<Essay />} />
@@ -42,6 +46,7 @@ root.render(
 
 
       <Routes>
+
         <Route path="/" element={
           <>
             <Best_slide data={datainfo} />
@@ -50,6 +55,7 @@ root.render(
             <New></New>
             <User></User>
             <Form></Form>
+            <Footer></Footer>
           </>
         } />
         <Route path="/new-books/" element={<New_books />} />

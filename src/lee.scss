@@ -10,6 +10,7 @@
 
 
 
+
 // 상단navivar
 .navivar {
     // width: 100vw;
@@ -181,8 +182,8 @@
 
 .site {
 
-    bottom: -18%;
-    left: 28%;
+    bottom: 0;
+    left: 30%;
     z-index: 10000;
     position: absolute;
     padding: 40px 20px 0;
@@ -517,6 +518,8 @@
     color: #ddd;
 }
 
+.user {}
+
 // .text {
 //     text-align: center;
 //     position: relative;
@@ -558,6 +561,7 @@ input {
     border-left: none;
     border-right: none;
     border-top: none;
+
 }
 
 input::placeholder {
@@ -570,6 +574,7 @@ input::placeholder {
     background: url(./components/img/true.png) no-repeat right center;
     background-size: 15px;
     background-position-x: 150px;
+
 }
 
 
@@ -580,6 +585,7 @@ input::placeholder {
     background: url(./components/img/false.png) no-repeat right center;
     background-size: 15px;
     background-position-x: 150px;
+
 }
 
 textarea::placeholder {
@@ -593,15 +599,109 @@ textarea {
 
 .text {
     position: relative;
-    top: 35%;
-    left: 40%;
-    min-width: 350px;
+    min-width: 300px;
     height: 150px;
     max-height: 150px;
 }
 
 .btns {
     margin-right: 10px;
+}
+
+small {
+    position: absolute;
+}
+
+//footer
+.footer_section {
+    overflow-x: hidden;
+    height: 350px;
+}
+
+.footer-li,
+.footer-p {
+
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-p {
+    margin-bottom: 51px;
+}
+
+
+.footer-li {
+    margin-top: 95px;
+    margin-left: 35px;
+}
+
+
+footer {
+
+    color: #ddd;
+    background-color: #02131D;
+}
+
+.userin {
+    padding: 0 100px;
+}
+
+.btns {
+    position: relative;
+    top: 50px;
+    left: 5px;
+}
+
+#footerwrap {
+    overflow-x: hidden;
+}
+
+.footer_section {
+    font-size: 13px;
+}
+
+.ffce {
+    justify-content: center;
+    margin: 20px;
+}
+
+.footer-p {
+    margin-bottom: 70px;
+}
+
+.btni {
+    z-index: 10000009;
+    position: relative;
+    left: 45%;
+    bottom: 50px;
+}
+
+// .over {
+//     overflow-x: hidden;
+//     margin: 0 0;
+// }
+/* Navi_var.css */
+
+/* Define your styles for different screen sizes here */
+
+.btni {
+    /* Common styles for btni */
+}
+
+.btni.d-none {}
+
+.btni.d-md-flex {
+    display: flex;
+}
+
+.mainitem {
+    /* Common styles for mainitem */
+}
+
+.mainitem.d-none {}
+
+.mainitem.d-flex {
+    display: flex;
 }
 
 //모바일 
