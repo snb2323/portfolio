@@ -53,11 +53,11 @@ root.render(
           <>
             <Best_slide data={datainfo} />
             <List_box></List_box>
-            {/* <Main></Main>
+            <Main></Main>
             <New></New>
             <User></User>
             <Form></Form>
-            <Footer></Footer> */}
+            <Footer></Footer>
           </>
         } />
         <Route path="/new-books/" element={<New_books />} />

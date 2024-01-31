@@ -50,7 +50,7 @@ function Navi_var() {
             <div className='d-flex justify-content-between align-items-center px-lg-5 py-3 position-relative zup'>
                 <h1 className='mb-0 w-0 zup position-relative'>
                     <Link to="/" className='d-block'>
-                        <img className='logo' src={mainlogo} alt='로고' />
+                        <img className='logo ms-4' src={mainlogo} alt='로고' />
                     </Link>
                 </h1>
                 <div className={`btni  d-md-none `}>

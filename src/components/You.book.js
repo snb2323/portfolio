@@ -30,7 +30,20 @@ export default function User() {
                         spaceBetween={50}
                         slidesPerView={3}
                         scrollbar={{ draggable: true, dragSize: 24 }}
-
+                        breakpoints={{
+                            640: {
+                                slidesPerView: 3,
+                                spaceBetween: 20,
+                            },
+                            768: {
+                                slidesPerView: 3,
+                                spaceBetween: 40,
+                            },
+                            1024: {
+                                slidesPerView: 5,
+                                spaceBetween: 50,
+                            },
+                        }}
                     >
                         {datainfo.User.map((book, index) => (
                             <div className="mainitem">

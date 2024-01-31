@@ -4,38 +4,38 @@ import { Link } from "react-router-dom";
 function List_box() {
     return (
         <>
-            <div className='site d-flex'>
+            <div className='site d-flex justify-content-center sm-mt-5 '>
                 <ul>
-                    <li>
+                    <li className="m-1 m-md-1 m-lg-2">
                         <Link to="/new-books">
-                            <img src='./img/icon1.png' alt='신작도서' />
+                            <img src='./img/icon1.png' className="img-fluid" alt='신작도서' />
                             <span>신작도서</span>
                         </Link>
                     </li>
 
-                    <li>
+                    <li className="m-1 m-md-1 m-lg-2">
                         <Link to="Bestbook">
-                            <img src='./img/icon2.png' alt='베스트'></img>
+                            <img src='./img/icon2.png' className="img-fluid" alt='베스트'></img>
                             <span>베스트</span>
                         </Link>
                     </li>
 
-                    <li>
+                    <li className="m-1 m-md-1 m-lg-2">
                         <Link to="Curation">
-                            <img src='./img/icon3.png' alt='큐레이션'></img>
+                            <img src='./img/icon3.png' className="img-fluid" alt='큐레이션'></img>
                             <span>큐레이션</span>
                         </Link>
                     </li>
 
-                    <li>
+                    <li className="m-1 m-md-1 m-lg-2">
                         <Link to="Goods">
-                            <img src='./img/icon4.png' alt='굿즈'></img>
+                            <img src='./img/icon4.png' className="img-fluid" alt='굿즈'></img>
                             <span>굿즈</span>
                         </Link >
                     </li>
-                    <li>
+                    <li className="m-1 m-md-1 m-lg-2">
                         <Link to="Program">
-                            <img src='./img/icon5.png' alt='프로그램'></img>
+                            <img src='./img/icon5.png' className="img-fluid" alt='프로그램'></img>
                             <span>프로그램</span>
                         </Link>
                     </li>
