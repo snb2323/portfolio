@@ -35,9 +35,18 @@ export default function Footer() {
                 </div>
                 <div className="col-3 d-flex mt-3 ml-3">
                     <ul className="face d-flex">
+                        <li>
+                            <i class="bi bi-instagram px-3"></i>
+                        </li>
+                        <li>
+                            <i class="bi bi-twitter"></i>
 
-                        <li>d</li>
-                        <li>d</li>
+                        </li>
+                        <li>
+                            <i class="bi bi-book px-3"></i>
+
+
+                        </li>
                     </ul>
                 </div>
             </div>

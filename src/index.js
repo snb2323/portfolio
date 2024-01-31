@@ -6,6 +6,8 @@ import {
 import './index.css';
 import './lee.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap-icons/font/bootstrap-icons.css";
+
 import datainfo from './data/data.json'
 import List_box from './components/List_box';
 import New_books from './components/list.box/New_books';
@@ -51,11 +53,11 @@ root.render(
           <>
             <Best_slide data={datainfo} />
             <List_box></List_box>
-            <Main></Main>
+            {/* <Main></Main>
             <New></New>
             <User></User>
             <Form></Form>
-            <Footer></Footer>
+            <Footer></Footer> */}
           </>
         } />
         <Route path="/new-books/" element={<New_books />} />

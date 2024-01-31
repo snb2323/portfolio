@@ -69,8 +69,8 @@
 
 .logo {
     z-index: 100000;
-
-    border-width: 0;
+    max-width: 300px;
+    width: 6vw;
 }
 
 .mainitem {
@@ -80,13 +80,16 @@
 
 
 .navi a {
+
+    margin-left: 40px;
     text-decoration: none;
     color: black;
-    padding: 10px;
+    padding: 30px;
     font-size: 1rem;
 }
 
 .btn_form {
+    width: 8vw;
     line-height: 1.5;
     background-color: #d1edff;
     border-style: none;
@@ -580,7 +583,7 @@ input::placeholder {
     border: 2px solid green;
     background: url(./components/img/true.png) no-repeat right center;
     background-size: 15px;
-    background-position-x: 150px;
+    background-position-x: 180px;
 
 }
 
@@ -591,7 +594,7 @@ input::placeholder {
     border: 2px solid #f44336;
     background: url(./components/img/false.png) no-repeat right center;
     background-size: 15px;
-    background-position-x: 150px;
+    background-position-x: 180px;
 
 }
 
@@ -653,6 +656,10 @@ footer {
     padding: 0 100px;
 }
 
+.face {
+    font-size: 19px;
+}
+
 .btns {
     position: relative;
     top: 50px;
@@ -677,10 +684,39 @@ footer {
 }
 
 .btni {
+    button {
+        font-size: 0;
+        line-height: 0;
+
+        &:before {
+            font-size: 2rem;
+            content: "\F479";
+            font-family: "bootstrap-icons";
+        }
+
+
+    }
 
     //after 이용해서 햄버거출력
     &.toggle {
-        // X로 출력
+        button {
+            &:before {
+                // X로 출력
+                content: "\F659";
+            }
+        }
+
+
+    }
+
+    &.toggle+.navi {
+        display: block !important;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background-color: white;
+        ;
     }
 }
 
@@ -726,10 +762,14 @@ footer {
         flex-direction: column;
     }
 
-    .btn_form {
+    .btni {
         position: relative;
-        bottom: 170px;
-        left: 270px;
+    }
+
+    .btn_form {
+        position: absolute;
+        // bottom: 170px;
+        left: 70px;
     }
 
     .img_pc {
