@@ -34,59 +34,74 @@ export default function Main() {
             </div>
 
             <MainWrapper>
-                <div className=" mainslide">
+                <div>
                     <Swiper
                         modules={[Navigation, Scrollbar]}
                         loop={true}
                         rewind={true}
                         navigation={true}
                         spaceBetween={50}
-                        slidesPerView={3}
+                        slidesPerView={1}
+                        centeredSlides={true}
                         scrollbar={{ draggable: true, dragSize: 24 }}
-
+                        breakpoints={{
+                            640: {
+                                slidesPerView: 1,
+                                // spaceBetween: 20,
+                            },
+                            768: {
+                                slidesPerView: 2,
+                                // spaceBetween: 40,
+                            },
+                            1024: {
+                                slidesPerView: 4,
+                                // spaceBetween: 50,
+                            },
+                        }}
                     >
                         {datainfo.Design.map((book, index) => (
-                            <div className="mainitem">
-                                <SwiperSlide key={index}>
-
-                                    <div className="mainteduli "
-                                        onMouseEnter={() => setIsHovered(true)}
-                                        onMouseLeave={() => setIsHovered(false)}
-                                    >
-
-                                        <Link to={`/new-books/${index}`}>
-                                            <img
-                                                src={book.src}
-                                                alt={book.alt}
-                                            />
-                                        </Link>
+                            <SwiperSlide className="Mainswiper" key={index}>
+                                <div className="mainteduli "
+                                    onMouseEnter={() => setIsHovered(true)}
+                                    onMouseLeave={() => setIsHovered(false)}
+                                >
+                                    <Link to={`/new-books/${index}`}>
+                                        <img
+                                            src={book.src}
+                                            alt={book.alt}
+                                        />
+                                    </Link>
+                                    <div className="mainname">
+                                        <div>
+                                            <h4><strong>{book.h4}</strong></h4>
+                                            <p><strong>{book.p}</strong></p>
+                                        </div>
+                                        <div className="ico">
+                                            <span>
+                                                {clickedItemIndex === index ? (
+                                                    <HeartFilled style={{ color: 'red', fontSize: '21px' }} onClick={() => setClickedItemIndex(null)} />
+                                                ) : (
+                                                    <HeartOutlined style={{ fontSize: '20px' }} onClick={() => setClickedItemIndex(index)} />
+                                                )}
+                                            </span>
+                                            <span><img onClick={() => {
+                                                alert("장바구니담기")
+                                            }} style={{ width: "30px", height: "auto" }} src={cartImage} alt="dasda" /></span>
+                                        </div>
                                     </div>
-                                    <div className="ico">
+                                </div>
 
-                                        <span className="ico1">
+                            </SwiperSlide>
 
-                                            {clickedItemIndex === index ? (
-
-                                                <HeartFilled style={{ color: 'red', fontSize: '21px' }} onClick={() => setClickedItemIndex(null)} />
-                                            ) : (
-                                                <HeartOutlined style={{ fontSize: '20px' }} onClick={() => setClickedItemIndex(index)} />
-                                            )}
-                                        </span>
-                                        <span className="ico2"><img onClick={() => {
-                                            alert("장바구니담기")
-                                        }} style={{ width: "30px", height: "auto" }} src={cartImage} alt="dasda" /></span>
-                                    </div>
-                                    <div className="maintedulip">
-                                        <strong><h4>{book.h4}</h4></strong>
-                                        <strong><p>{book.p}</p></strong>
-                                    </div>
-                                </SwiperSlide>
-                            </div>
                         ))}
-                    </Swiper>
-                </div>
 
-            </MainWrapper>
+                    </Swiper>
+
+                </div >
+
+
+            </MainWrapper >
+
         </>
     );
 }

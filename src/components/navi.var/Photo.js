@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import datainfo from '../../data/data.json';
 import Navibook from '../Styled/navibook';
 
 export default function Photo() {
     return (
+
+
         <>
             <Navibook>
                 <h2 className='navivartitle'>Photo</h2>

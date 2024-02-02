@@ -26,6 +26,8 @@ function Best_slide(props) {
 
             spaceBetween={50}
             slidesPerView={1}
+            centeredSlides={true}
+
 
             pagination={{
 
@@ -67,7 +69,6 @@ function Best_slide(props) {
                             </div>
                             <div id="page_ni" className='swiper-pagination '>
                                 <span className='pagi swiper-pagination-bullet'></span>
-
                             </div>
                         </div>
 
