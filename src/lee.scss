@@ -8,6 +8,11 @@
     }
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 
 .w-0 {
     width: 0;
@@ -445,18 +450,18 @@
     // justify-content: center;
 }
 
-.maintedulip {
-    right: 60px;
-    top: 80%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    max-width: 280px;
+// .maintedulip {
+//     right: 60px;
+//     top: 80%;
+//     display: flex;
+//     flex-direction: column;
+//     text-align: center;
+//     max-width: 280px;
 
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    margin: -30px 0 0 40px !important;
-}
+//     border-bottom-left-radius: 10px;
+//     border-bottom-right-radius: 10px;
+//     margin: -30px 0 0 40px !important;
+// }
 
 
 .mainteduli {
@@ -524,6 +529,9 @@
     margin-top: -2px;
 }
 
+.swiper-scrollbar {
+    margin-bottom: 2px;
+}
 
 //form 
 // .form {
@@ -585,6 +593,7 @@ input {
 #name,
 #address,
 #email {
+    color: white;
     border-bottom: 1px solid white;
     border-left: none;
     border-right: none;
@@ -620,15 +629,15 @@ textarea::placeholder {
 }
 
 textarea {
+    color: white;
     border: 1px solid white;
     background-color: transparent;
 }
 
 .text {
-    position: relative;
+
     min-width: 300px;
-    height: 150px;
-    max-height: 150px;
+    min-height: 150px;
 }
 
 .btns {
@@ -642,7 +651,6 @@ small {
 //footer
 .footer_section {
     overflow-x: hidden;
-    height: 350px;
 }
 
 .footer-li,
@@ -652,15 +660,10 @@ small {
     justify-content: center;
 }
 
-.footer-p {
-    margin-bottom: 51px;
-}
 
 
-.footer-li {
-    margin-top: 95px;
-    margin-left: 35px;
-}
+
+.footer-li {}
 
 
 footer {
@@ -696,9 +699,6 @@ footer {
     margin: 20px;
 }
 
-.footer-p {
-    margin-bottom: 70px;
-}
 
 .btni {
     button {
@@ -832,11 +832,15 @@ footer {
     }
 
     .text {
-        display: block;
+        min-width: 150px !important;
+        max-height: 100px !important;
+        margin-left: 110px;
     }
 
-    .userin {
-        display: flex !important;
-        flex-direction: column !important;
+    .tarea {
+        width: 350px !important;
+        height: 150px;
     }
+
+
 }

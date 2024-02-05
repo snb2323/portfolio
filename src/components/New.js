@@ -11,7 +11,7 @@ export default function New() {
         <>
             <Navibook>
                 <h1 className='newtitle'>New</h1>
-                <div className='as col-row  d-flex'>
+                <div className='as col-row  d-flex mb-5'>
                     {datainfo.New.map((book, index) => (
                         <div key={index} >
                             <Link to={`/new-books/${index}`}>

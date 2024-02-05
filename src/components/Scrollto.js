@@ -1,12 +1,16 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
+function Scrolltop() {
+    const location = useLocation();
 
-export default function Scrolltop() {
-    const { pathname } = useLocation();
     useEffect(() => {
-        console.log(window.scrollY)
-        window.scrollTo(0, 0);
-    }, [pathname]);
-
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'instant' //여기 옵션을 auto에서 instant 바꾸면 한번에
+        });
+    }, [location.pathname]); // 라우트 변경을 감지하기 위해 사용
 }
+
+export default Scrolltop

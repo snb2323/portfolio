@@ -17,8 +17,8 @@ function Form() {
     return (
         <div className="sectionform">
             <form className="form " noValidate onSubmit={handleSubmit(onSubmit)}>
-                <div className=" d-md-flex justify-content-center ">
-                    <h1 className="formh mt-3">상담문의</h1>
+                <div className=" d-flex justify-content-center ">
+                    <h1 className="formh mt-3 sm-d-flex ">상담문의</h1>
                 </div>
 
                 <fieldset>
@@ -81,7 +81,7 @@ function Form() {
 
                                 </div>
                             </div>
-                            <div className="col-5 ms-auto col-sm-d-block">
+                            <div className="tarea col-5 ms-auto col-sm-d-block">
                                 <textarea
                                     className="text  position-rel "
                                     id="tx"
@@ -106,4 +106,5 @@ function Form() {
 }
 
 export default Form;
+
 
