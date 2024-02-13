@@ -1,7 +1,52 @@
 import React from "react";
+import axios from "axios";
 import { useForm } from "react-hook-form";
+import { useState } from "react";
 
 function Form() {
+
+    // const productApi = async (myName, data = null) => {
+    // 위에 myname은 sql테이블이름 , get post 결정
+    //     try {
+    //         if (data) { //글쓰기
+
+    //             const response = await axios.post(`/data/${myName}`, {
+    //                 headers: {
+    //                     'Content-Type': 'multipart/form-data',
+    //                 },
+    //                 body: data //전송데이터 form 데이터 
+    //             });
+
+    //             if (!response.ok) {
+    //                 throw new Error('Network response was not ok');
+    //             }
+
+    //             const responseData = await response.json(); // Assuming the response is JSON, adjust as necessary
+    //             return responseData;
+    //         } else { //글 목록
+    //             return axios.get(`/data/${myName}`);
+    //         }
+
+    //     } catch (error) {
+    //         console.log(error);
+    //         return error;
+    //     }
+    // };
+    const [formdata, setformdata] = useState({ //input name이 변수
+        name: '',
+        address: '',
+        email: '',
+    })
+    const handleChange = (e) => {
+        // 데이터삽입
+        const { name, value } = e.target;
+        setformdata(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
+
+
     const {
         register,
         handleSubmit,
@@ -34,7 +79,9 @@ function Form() {
                                             className={`bor  mb-4 0 ${errors.name ? "invalid" : "valid"}`}
                                             id="name"
                                             type="text"
+                                            name="name"
                                             placeholder="이름"
+                                            value={formdata.name}
                                             {...register("name", { required: "이름은 필수 입력입니다." })}
                                         />
                                         {errors.name && <small>{errors.name.message}</small>}
@@ -45,6 +92,7 @@ function Form() {
                                             <input
                                                 className={` mb-4 0 ${errors.address ? "invalid" : "valid"}`}
                                                 id="address"
+                                                name="address"
                                                 type="text"
                                                 placeholder="주소"
                                                 {...register("address", { required: "주소는 필수 입력입니다." })}
@@ -58,6 +106,7 @@ function Form() {
                                                 className={`mb-4 0 ${errors.email ? "invalid" : "valid"}`}
                                                 id="email"
                                                 type="email"
+                                                name="email"
                                                 placeholder="test@email.com"
                                                 {...register("email", {
                                                     required: "이메일은 필수 입력입니다.",

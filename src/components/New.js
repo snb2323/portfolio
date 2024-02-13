@@ -15,10 +15,15 @@ export default function New() {
                     {datainfo.New.map((book, index) => (
                         <div key={index} >
                             <Link to={`/new-books/${index}`}>
-                                <img style={{ width: "400px", height: "400px" }} className='newb' src={book.src} alt={book.alt} />
+                                <div className='newb'>
+                                    <img style={{ width: "400px", height: "400px" }} src={book.src} alt={book.alt} />
+                                    <div className='fun hidden'>관심상품아이콘</div>
+                                </div>
+
                             </Link>
                             <h4>{book.h4}</h4>
                             <p>{book.p}</p>
+
                         </div>
 
 

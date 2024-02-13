@@ -83,7 +83,6 @@ ul {
 }
 
 
-
 .navi a {
 
     margin-left: 40px;
@@ -215,6 +214,66 @@ ul {
     display: block;
     color: rgb(0 0 0 / 60%);
 
+}
+
+.newb {
+    position: relative;
+}
+
+
+.fun {
+
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    left: 28%;
+    bottom: 55px;
+    transition: 0.5s;
+    z-index: 10000;
+    font-size: 0;
+    line-height: 0;
+    width: 70%;
+    align-items: end;
+
+
+
+
+
+
+    &::before {
+        content: "";
+        display: block;
+        background-image: url(./components/img/icon_1.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        background-image: url(./components/img/icon_2.png);
+        background-repeat: no-repeat;
+        background-size: 25px;
+        width: 50%;
+        height: 30px;
+    }
+}
+
+.hidden {
+    text-indent: -9999em;
+}
+
+
+
+.newb:hover .fun {
+    max-height: 100px;
+}
+
+.navi span:hover {
+    transform: translateY(20px);
+    cursor: pointer;
 }
 
 .site img {
