@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { CiSearch } from "react-icons/ci";
+
 import { Link } from "react-router-dom";
 import mainlogo from '../img/logo.png';
 
@@ -27,7 +28,9 @@ function Navi_var() {
                 <div className="mainitem  w-auto position-relative d-flex text-center justify-content-center align-items-center">
                     <ul className='mypg d-flex '>
                         <li >
-                            <img src="./img/cart.png" alt="장바구니" height="25" />
+                            <a href="#">
+                                <img src="./img/cart.png" alt="장바구니" height="25" />
+                            </a>
                         </li>
 
                         <li className='px-2'>
